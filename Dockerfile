@@ -13,7 +13,7 @@ RUN python3 -m spacy download en_core_web_lg-2.3.1 --direct
 RUN git clone https://github.com/huggingface/neuralcoref.git
 RUN cd neuralcoref && pip3 install -r requirements.txt && pip3 install -e .
 
-RUN git clone https://github.com/joanSolCom/ThemePro.git 
+RUN git clone https://github.com/genius92606/ThemePro.git 
 RUN apt-get install wget unzip -y
 RUN cd ThemePro/backend/embeddings && wget http://nlp.stanford.edu/data/glove.42B.300d.zip && unzip glove.42B.300d.zip && rm glove.42B.300d.zip
 RUN cd ThemePro/backend/embeddings && python3 glove2word2vec.py
